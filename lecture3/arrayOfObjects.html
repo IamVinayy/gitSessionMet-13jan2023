@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of objects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    
+    <script >
+        var products = [
+    {
+        name: 'camera',
+        price: 999,
+        descount: 10,
+        link: 'car.webp'
+    },
+    {
+        name: 'shirt',
+        price: 1999,
+        descount: 20,
+        link:'HairStyleGoal.png'
+    },
+    {
+        name: 'bikeOil',
+        price: 599,
+        descount: 30,
+        link:'https://rukminim1.flixcart.com/image/400/400/jc0ttow0/vehicle-lubricant/5/h/q/1-3000-4t-plus-20w40-hc-tech-engine-oil-for-bikes-motul-original-imaff8z4xtq5ry6a.jpeg?q=70'
+    },
+    {
+        name: 'mobile',
+        price: 299,
+        descount: 15,
+        link:'https://rukminim1.flixcart.com/image/400/400/jc0ttow0/vehicle-lubricant/5/h/q/1-3000-4t-plus-20w40-hc-tech-engine-oil-for-bikes-motul-original-imaff8z4xtq5ry6a.jpeg?q=70'
+    },
+    {
+        name: 'light',
+        price: 699,
+        descount: 19,
+        link:'https://rukminim1.flixcart.com/image/400/400/kz065jk0/emergency-light/v/t/4/high-quality-60-high-bright-led-light-with-android-charging-original-imagb3v8h8zdm3q3.jpeg?q=70'
+    },
+    {
+        name: 'Bat',
+        price: 2299,
+        descount: 8,
+        link:'https://rukminim1.flixcart.com/image/400/400/l4d2ljk0/bat/3/4/4/1000-hitman-full-size-double-blade-poplar-cricket-bat-advance-original-imagf9zzgxxfamce.jpeg?q=70'
+    }
+
+    ]
+//now array is a collection of objects. 
+    console.log(products);
+
+    if(products.length>0){
+        for(var results in products){
+            console.log(results);
+            document.write(`
+            <div class="col-xl-3 text-center">
+                <img src=${results.path} class = "img-fluid "/>
+                <h2>   ${results.name} </h2> 
+            </div>
+            `)
+        }
+    }
+    </script>
+</body>
+</html>

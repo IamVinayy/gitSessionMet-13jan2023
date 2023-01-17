@@ -1,0 +1,54 @@
+<!-- jquery has only functions 
+    it is a derivation of js
+    easy to implement jquery
+    same things of js can be done in jquery 
+    it is a library of js - it has all function.
+    it makes coding in js easy
+      -->
+
+
+<!-- dom traverse and manipulation, event handling, animation in ajax in simplest way by jquery -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CDN - content delivery network.  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, architecto aliquid quo odio ab id, atque obcaecati ad corporis nostrum deserunt pariatur iusto velit quas. Consequuntur aspernatur praesentium aliquid at.</p>
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aliquid ipsum, explicabo nihil, eaque fuga in impedit nesciunt voluptate eveniet expedita repellat quasi aperiam et! Ab perferendis voluptate nam ipsa.</p>
+        <button>Enter</button>
+        <p id="ppp">helel</p>
+    </div>
+
+    <script>
+        console.log( $(jQuery));
+        $('.para').eq(1).css('border','solid')
+        $('.para').eq(1).css('borderradius','solid')
+        $('.para').eq(1).css('background','lightgray')
+
+        // eventHandler
+        //innerHTML = html
+        //innerText = text
+        $('button').click(function(){
+            $('.para').html('<h1>Vinay</h1>')
+            console.log($('p').eq(2));
+            $('p').eq(2).html('<h1> Vinay </h1>')
+            
+        })
+    </script>
+</body>
+
+</html>
+<!-- include cdn file of jquery  -->

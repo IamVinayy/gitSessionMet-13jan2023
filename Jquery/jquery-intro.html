@@ -1,0 +1,52 @@
+<!-- jquery has only functions 
+    it is a derivation of js
+    easy to implement jquery
+    same things of js can be done in jquery 
+    it is a library of js - it has all function.
+    it makes coding in js easy
+      -->
+
+
+<!-- dom traverse and manipulation, event handling, animation in ajax in simplest way by jquery -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <!-- CDN - content delivery network.  -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+      <div class="container">
+            <p>Hello para</p>
+            <p id="para2">Hello para</p>
+      </div>
+
+<script>
+            console.log($);
+            console.log(typeof $); // it is function
+            console.log(jQuery);
+            console.log(typeof jQuery); //it is also function. 
+            // hence $ and jQuery are logically simillar. 
+
+            // document.querySelector('p').style.border='solid'
+
+            // $(selectorName)
+            console.log($('p'));
+            // $('p').css('background','gray');
+            $('p').css('border', 'solid red');
+
+            $("#para2").css('border', 'solid red');
+            $('p').width(300);
+            $('p').height(300);
+            
+      </script>
+</body>
+
+</html>
+<!-- include cdn file of jquery  -->

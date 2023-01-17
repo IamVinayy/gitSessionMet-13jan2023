@@ -1,0 +1,30 @@
+1. hoisting
+2. var, let & const
+3. functions (named, anonymous, arrow)
+4. callback
+5. array, custome objects, sets
+6. array and object destruct
+7. spread operator
+8. rest parameter 
+9. promise, fetch, async await
+10. dom css
+11. dom methods 
+        - selector methods
+        - other methods
+12. dom properties
+13. dom traverse properties
+14. dom node manipulate
+15. loops 
+        - array - for of, for in, foreach
+        - object - for in
+16. first class function 
+        - function as a value variable
+        - function argument outer function
+        - return function from outer function
+17. higher order function
+        - filter()
+
+18. block scope, functional scope.
+
+
+

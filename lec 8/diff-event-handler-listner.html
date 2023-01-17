@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- event handling/listning -
+            it is a way to apply events at runtime by using java script -->
+
+    <button id="but" onclick="myfunc()">enter</button>
+
+    <p id="para">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident commodi tempore deleniti perferendis in sed
+        aliquam obcaecati facilis sequi fugit assumenda magnam reprehenderit blanditiis culpa fuga quisquam, veniam,
+        corporis nisi.
+    </p>
+
+    <script>
+        function myfunc() {
+            //mouseover event handler
+            document.getElementById('para').onmouseover = function(){
+                console.log('mouse over working');
+            }
+            document.getElementById('para').onmouseout = function(){
+                // console.log('mouse oute working');
+                this.innerHTML = 'Vivek'
+            }
+            document.getElementById('para').onmouseover = function(){
+                console.log('mouse over working', Math.random());
+                this.innerHTML = 'Vinay';
+            }
+
+            //if same event is used twice then the last will be executed 
+            //here the last is onmouseover which generates random number.
+
+        }
+    </script>
+
+    <hr>
+
+    <button id="butt" onclick="myfunc2()">enter</button>
+    <p id="para3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus animi officia reprehenderit eos consequatur aliquam, reiciendis quam officiis rerum. Provident harum omnis accusantium doloremque maiores quia molestiae velit aperiam ipsam.</p>
+
+
+    <script>
+        function myfunc2(){
+            document.querySelector('#para3').addEventListener('mouseover', function(){
+                console.log('Mouseover works');
+            });
+            document.querySelector('#para3').addEventListener('mouseout', function(){
+                console.log('Mouseout works');
+            });
+            document.querySelector('#para3').addEventListener('mouseover', function(){
+                console.log('Mouseover 2 works');
+            });
+            
+            //addEventListener method - takes 2 parameters
+            //    1) eventname without on - ie mouseover instead of onmouseover
+            //    2) what function to perform 
+            // same event can be used multiple times in eventListener case which is not possible in event handler. in event handler, if we use same event twice, last used event will be used
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <div class="container">
+
+
+        <button class="btn btn-success">Enter </button>
+    </div>
+    <script>
+
+        // we want to have something in json format. so go on fake store api 
+        //access all products in json string format
+        $(document).ready(function(){
+            var apiPath = 'https://fakestoreapi.com/products'
+            $('button').click(function(){
+                // $.get()
+                // $.ajax()
+                // $.getJSON() in 3 ways we can fetch data 
+
+                //by .get and .ajax, we can also fetch text data and json data but by .getJSON() we can only fetch json objects.
+
+                // number1 ie. $.get() - pass api as 1st parameter and capture response in res of function. 
+                $.get(apiPath,function(res){
+                    console.log('this is $.get approach');
+                    console.log(res);
+                });
+
+                // number 2 way ie. $.ajax() - specify all values of keys in ajax
+                $.ajax({
+                    type:"GET",
+                    url:apiPath,
+                    success:function(res){
+                        console.log('from $.ajax()');
+                        console.log(res);
+
+                    },
+                    error:function(err){
+                        console.log(err);
+                    }
+                });
+
+                // number 3 - getJSON() - pass apiPath as 1st parameter and function as 2nd parameter
+                //getJson need data in only json format in 2nd parameter.
+                $.getJSON(apiPath,function(res){
+                    console.log('from $.getJSON() approach');
+                    console.log(res);
+                });
+
+
+                //we can also get content from a text file by $.get()
+                $.get('dummyFile.txt',function(res){
+                    console.log('this is $.get approach');
+                    console.log(res);
+                });
+            })
+        })
+    </script>
+</body>
+

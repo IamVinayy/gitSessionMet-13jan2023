@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+
+    <script>
+        // javascript object or
+        // custome object in js.
+
+        var product = {
+            //dosent have index , it have keys.
+            //hence, custome objects with coutome key, to refer them like what we refer in arrays i.e. index
+            name: 'product 1', //for key value, quotes' are not compulsory
+            price : 1000,
+            discount : 25,
+            brand: 'nike',
+            path : 'https://rukminim1.flixcart.com/image/400/400/kmp7ngw0/monitor/j/z/h/s2721hn-27-py0df-dell-original-imagfjphuywuh2a7.jpeg?q=70'
+            //object {key: value,key: value,key: value....};
+        }; 
+        
+        //this is custome object. this is also collection 
+        // in arrays, as we store something , it bydefault has its index.
+
+        // but what about custome object
+        // array says, store similar type of data
+        // but custome obj says, store data which is not connected at all
+
+        // example - a product(which we see as a picture on amazon site) is a collection. Since it has image-path, name, price, discount,brand etc added to it.  
+        // since all name price are different data type
+        //these datas are not inter-connected, like arrays, element have indices from 0.
+        console.log(typeof product);
+        console.log(product);
+
+
+//document.propertyname(keyname)
+document.write(product.name);
+document.write(product.price);
+document.write(product.brand);//access brand's value (ie nike) of products as product.brand
+document.write(product.discount);
+document.write(product['discount'])//another way to access discount
+document.write(product['brand'])
+document.write(`<br><br> `)
+
+        document.write(`
+            <div class="container">
+                <div class="row"> 
+                    <div class="call-xl-3">
+                        <img src = '${product.path}' class = 'img-fluid'/> 
+                        <h3>${product.name}</h3>
+                        <p>${product.price}</p>
+                    </div>
+                    
+                </div>
+            </div>
+        `)
+        document.write(`
+            <div class="container">
+                <div class="row"> 
+                    <div class="call-xl-3">
+                        <img src = '${product.path}' class = 'img-fluid'/> 
+                        <h3>${product.name}</h3>
+                        <p>${product.price}</p>
+                    </div>
+                    
+                </div>
+            </div>
+        `)
+        document.write(`
+            <div class="container">
+                <div class="row"> 
+                    <div class="call-xl-3">
+                        <img src = '${product.path}' class = 'img-fluid'/> 
+                        <h3>${product.name}</h3>
+                        <p>${product.price}</p>
+                    </div>
+                    
+                </div>
+            </div>
+        `)
+        document.write(`
+            <div class="container">
+                <div class="row"> 
+                    <div class="call-xl-3">
+                        <img src = '${product.path}' class = 'img-fluid'/> 
+                        <h3>${product.name}</h3>
+                        <p>${product.price}</p>
+                    </div>
+                    
+                </div>
+            </div>
+        `)
+        document.write(`
+            <div class="container">
+                <div class="row"> 
+                    <div class="call-xl-3">
+                        <img src = '${product.path}' class = 'img-fluid'/> 
+                        <h3>${product.name}</h3>
+                        <p>${product.price}</p>
+                    </div>
+                    
+                </div>
+            </div>
+        `)
+
+
+        var names={
+            0: 'vinay',
+            1: 'bhalke',
+            2: 100
+        }
+        // document.write(names.0); - this cant be done , hence other format is given.-INVALID
+        document.write(names[0]);
+        document.write(names[1]);
+        document.write(names[2]);
+        console.log(names[0]);
+        console.log(names[1]);
+        console.log(names[2]);
+
+        // data will be fetched from backend ie database and then they will be stroed in objects and then they will be displayed on the website. Hence it is a dynamic website now. 
+
+    </script>
+</body>
+
+</html>

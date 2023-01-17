@@ -1,0 +1,97 @@
+<body>
+    
+
+<script>
+
+    var user = { name: 'vinay', age: 20, marks: 62 };
+
+    console.log(typeof user);
+    console.log(user);
+    var changeToString = JSON.stringify(user);
+    console.log(typeof changeToString);
+    console.log(changeToString);
+    var againChangeToObj = JSON.parse(changeToString);
+    console.log(againChangeToObj);
+
+
+    /*
+    from string to obj conversion - JSON.parse();
+    from json obj to string = JSON.stringify();
+    '{"name":"vinay"}'
+
+    datatypes allowed in json string - string, number, array, object, boolean, null.
+
+    avoid datatypes - function , date, undefined, 
+
+    Need to convert json to string :-  
+    The HTTP does not understand binary format and you can not send JSON object. And that is why it is necessary to convert the JSON object into a string before sending it to the server.
+    */
+
+    var user = '{"name":"vinay","age":24,"college":"met"}';//string and number 
+    console.log(user);
+
+    var details = '{"details":{"name":"vinay","age":{"myage":24,"myGFAge":22},"city":"mumbai"}}'
+    console.log(details);
+    var toJsonDetails = JSON.parse(details);
+    console.log(toJsonDetails);
+
+    // array - in json 
+    var brand = '{"records":["kingfisher","tuborg","bugwiser","carlsberg","foster"]}'
+    console.log(brand);
+
+    //boolean and null
+    var user = '{"status":true,"role": null}';
+    console.log(user);
+    var user2 = JSON.parse(user);
+    console.log(user2);
+
+</script>
+<script>
+    /* 
+        if we are storing function , date or undefined - then how to evaluate that one.
+
+    */
+    var user = {
+        name: 'vinay',
+        age: 24,
+        role: function () {
+            return 'developer';
+        }
+    };
+    console.log(user.name);
+    console.log(user.age);
+    console.log(user.role()); //access role as a function and not as a variable key.
+
+
+
+</script>
+<script>
+    //function in string object. 
+
+    var user = '{"name": "vinayBhalke","age":244,"role":"function(){return \'developer\'}"}'
+    //to write single quote in single quote, use backslash
+
+    var ans = JSON.parse(user);
+    console.log(ans);
+
+    var record = ans.role;
+    console.log(record);
+
+    var funcAns = eval("("+ans.role+")");//evaluate the function in user object
+    console.log(funcAns);
+    console.log(funcAns());
+
+</script>
+
+<script>
+    var user = {name:"vivek",age:18, studying:function(){return "coading"}}
+    console.log(user);
+
+    user.studying = user.studying.toString();
+    console.log(user.studying);
+
+    var ans = JSON.stringify(user);
+    console.log(ans);
+</script>
+
+</body>

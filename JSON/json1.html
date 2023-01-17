@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        JSON - java Script object notation. 
+        it is a text format to transfer data between different technologies
+     -->
+
+
+    <script>
+        var user = {
+            name: 'vinay',
+            age: 24
+        }
+        console.log(user);
+        console.log(typeof user);
+        
+        //to convert above structure in json string 
+        //need to have keeys in Double quotes
+        
+        var jsonString = '{"name":vinay,"age": 24}';
+        
+        console.log(jsonString);
+        
+        console.log(typeof jsonString); //string 
+
+        //to transfer object values in to string and string to objects 
+        //
+        // 1) transfer object in to string
+
+        var objToString = JSON.stringify(user);
+        console.log(objToString);
+
+        // 2) convert String to object
+
+        // var jsonObj = JSON.parse(jsonString);
+        var sttrrng = '{"Language": "java","lang2": "string"}';
+
+        var jsonObj = JSON.parse(sttrrng);
+        
+        console.log(jsonObj);
+
+        
+    </script>
+
+    <script>
+        // datatypes allowed in json - string,number, object, array , boolean, null.
+        // avoid - functions, date, undefined . 
+    </script>
+</body>
+
+</html>
+
+<!-- 
+    3 ways to use ajax 
+    1) $.get
+    2)$.ajax
+    3) $.getJSON 
+    
+ -->

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query selector</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <style>
+            /* body{
+                background-color: aqua;
+            } */
+        </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Simple Interest</h1>
+        <input type="text" name="txt" id="txt1" class="form-control my-3" placeholder="Amount">
+        <input type="text" name="txt" id="txt2" class="form-control my-3" placeholder="ROI">
+        <input type="text" name="txt" id="txt3" class="form-control my-3" placeholder="Duration-in years">
+
+
+        <button onclick="myfunc()" class="btn btn-success my-3"> result</button>
+        <p id="mypara">Answer</p>
+    </div>
+
+    <script>
+        function myfunc() {
+            console.log(document);
+            console.log(document.querySelector('#txt1'));
+            console.log(document.querySelector('#txt2'));
+            console.log(document.querySelector('#txt3'));
+            //qureySelector is a special method = select id and also class 
+            //use #for id - and .for class names and tag name directly
+            var amt = parseFloat( document.querySelector('#txt1').value);
+            console.log(amt);
+            var ROI = parseFloat( document.querySelector('#txt2').value);
+            console.log(ROI);
+            var period = +( document.querySelector('#txt3').value);
+            console.log(ROI);
+// ----- use + sign to parseFloat. 
+            var finalAmt = Math.round(amt*(1+(ROI*period)));
+
+            console.log(finalAmt);
+
+            document.querySelector('#mypara').innerHTML = `
+                Your Final Amount is: <h3> ${finalAmt} </h3>
+            `
+
+        }
+        
+    </script>
+
+
+<!------------DOM METHODS
+    querySelector() = id, class, tag
+    getElementById() = id
+    getElementsByClassName() - class [0],[1] 
+    getElementsByName - name attribute 
+  ------------ DOM PROPERTIES 
+    innerText
+    innerHTML- 
+    id
+    style
+    value 
+-->
+</body>
+
+</html>

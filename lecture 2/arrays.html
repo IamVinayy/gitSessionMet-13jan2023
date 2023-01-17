@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+
+    <script>
+        // collection of similar datatype in a single variable.
+        
+        //real life example of arrays - there is list of brands on flipcart website those brandnames are stored in an array, because it is not possible to store 3000 or 4000 brands in seperete variables .
+
+        var brands = ['nike', 'pume'] //datatype is object
+
+        console.log(typeof brands);
+        console.log(brands);
+        console.log(brands.length);
+
+        var famMem = ['vinay','vivek','rajendra','ranjana','dhondiba',"babubai"];
+        console.log(famMem);
+        console.log(typeof famMem);  // typeof is an operator which returns the type of variable.
+         
+        var variables = ["hi,h1,h4"];
+        console.log(variables);
+
+        var famno = famMem.length; // .length is a property of arrays in JavaScript that returns or sets the number of elements in a given array
+
+        console.log(famno);
+
+        const cdacSubs = ['java','advjava', '.net','db','se','dsa','frontend','os'];
+
+        // there will be a stack and diff values will be stored in it. 1st positon is starting from o.
+        console.log(cdacSubs);
+        console.log(typeof cdacSubs);
+        console.log(cdacSubs.length);
+
+        var numbers = [1,2,3,4,5, 4.4,5.5];
+        console.log(numbers);
+
+        // complete window - The document object represents your web page
+        document.write(numbers);
+
+        // Backticks  - allows you to create strings in JavaScript-
+        //              used for HTML or code embedding purposes,
+        // they also act similar to single and double quotes. Besides, using backticks makes it easier for string operations.
+
+        let name = `vinay`;
+        console.log(name);//document means code between <html>to </html>
+        // document.write("vinay")
+        document.write(`<h1> hello world </h1>`);// this will print vinay heading on webpage. 
+        // document.write(<h1> vinay </h1>); = this will give error
+
+
+//------------------------------- INTERPOLATION in backticks -the insertion of something of a different nature into something else.
+// insertion of cdacSubs in string since it is a variable
+
+        document.write(`<li> nike</li>`)
+        document.write(`<ul><li> ${cdacSubs[0]}</li></ul>`);
+        document.write(`<ul><li> ${cdacSubs[1]}</li></ul>`);
+        document.write(`<ul><li> ${cdacSubs[2]}</li></ul>`);
+        document.write(`<ul><li> ${cdacSubs[3]}</li></ul>`);
+        document.write(`<ul><li> ${cdacSubs[4]}</li></ul>`);
+        document.write(`<ul><li> ${cdacSubs[5]}</li></ul>`);
+        document.write(`<ul><li> ${cdacSubs[6]}</li></ul>`); 
+       
+       
+        document.write(`<ul><li> ${numbers[0]}</li></ul>`); 
+        document.write(`<ul><li> ${numbers[1]}</li></ul>`); 
+        document.write(`<ul><li> ${numbers[2]}</li></ul>`); 
+        document.write(`<ul><li> ${numbers[3]}</li></ul>`); 
+        document.write(`<ul><li> ${numbers[4]}</li></ul>`); 
+        document.write(`<ul><li> ${numbers[5]}</li></ul>`); 
+        document.write(`<ul><li> ${numbers[6]}</li></ul>`); 
+        
+        // interpolation is needed in backticks
+        name = 'vinaybhalke';
+        document.write(name)//this will print vinaybhalke
+        document.write(`<h1>name</h1>`) //this will print name, if we want vinaybhalke, interpolation is needed
+
+        document.write(`<h1>${name}</h1>`) //this will print vinaybhalke in h1 tag. 
+
+//data stored in array must have similarities 
+        size = ['xl','xxl',11,3.3]; //size of a product.
+        document.write(size[0]+`<br>`);
+        document.write(size[1]+`<br>`);
+        document.write(size[2]+`<br>`);
+        document.write(size[3]+`<br>`);
+        
+        document.write(size.length);
+
+        var length = [1,2,3,4,5];
+        document.write(length.length);//just for fun-lenght of array named length.
+        document.write(length[5]);//this will print undefined on the screen. 
+        // if you try to access 5th element of an array where there are only 4 elements, it wont give error. 5th value will be having value as undefined
+
+        document.write(`<ol><li><h3>${length[0]}</h3></li></ol>`);
+        document.write(`<ol><li><h3>${length[1]}</h3></li></ol>`);
+        document.write(`<ol><li><h3>${length[2]}</h3></li></ol>`);
+        document.write(`<ol><li><h3>${length[3]}</h3></li></ol>`);
+        document.write(`<ol><li><h3>${length[4]}</h3></li></ol>`);
+
+        
+    </script>
+</body>
+
+</html>

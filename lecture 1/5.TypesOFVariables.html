@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // declare variables and default values in variables is undefined
+        var x=3;
+        console.log(x);
+        // before second decleration, x will be 3;
+        var x=5;
+        // for var keyword= we can redeclare the same variable. but the second declared value will be used after second decleration
+        console.log(x);
+        console.log(x);
+        let y=7;
+        console.log(y);//by default it is undefined.
+        // let y=3;
+        console.log(y);
+        // we cant redeclare a variable using let keyword
+        
+        // ==============  let variable cant be redeclared and by using var, variable can be redeclared. 
+
+        // --------- variables declared without any var, let or const keyowrds they can be used outside the declaring scope i.e. {} 
+        // --------- variables declared with var keyword also dont have restriction of scope {}
+        // --------- variables declared with let keyword  have restriction of scope {}. hence for a if else condition use let keyword.
+
+        // re assignment of let variable is possible but re decleration is not possible.
+        let paise = 44;
+        paise =422;
+        console.log(paise);
+    </script>
+</body>
+</html>

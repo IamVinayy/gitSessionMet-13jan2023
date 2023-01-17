@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my dom2 page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <style>
+        #para{
+            border: solid red 3px;
+        }
+        #heading{
+            background-color: gray;
+        }
+        .p1{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body><div class="container">
+    <p id="para" class="p1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam iusto impedit molestiae quos reiciendis dolorum. Error, omnis, magni minima voluptate enim, aspernatur quisquam eos porro quis dolor facere praesentium suscipit!
+    </p>
+    <h1 id="heading" class="p1">
+        Vinay's page
+    </h1>
+
+    <button class="btn btn-primary" onclick="myfunc()"> enter</button>
+</div>
+    <script>
+        function myfunc(){
+            console.log(`hello`);
+            var para1 = document.getElementById('para')
+             console.log(para1, typeof para1);
+             //since every tag in html is object hence para1's type is object.
+             
+             //now apply css and containt by button click. 
+
+            para1.style.border = 'solid green';
+            para1.style.backgroundColor = "yellow"
+            para1.style.paddingLeft = "5px";
+            para1.style.fontSize = '30px';
+           var st =  para1.style;
+           st.textAlign = 'center'
+
+           var h1 = document.getElementById('heading');
+
+        //    h1.style.width = '100%'
+           h1.style.textAlign = 'center'
+        //    h1.style.textDecorationColor = 'none'
+        h1.innerHTML = "<i>Raje ,Vinay</i>";//can replace html tags with there functions
+        //h1.innerText = "Bhalke Shahi"//just display whats there in the double quotes
+        h1.style.backgroundColor = "yellow";
+        h1.style.color = 'red'
+        // body.style.backgroundColor = "red"
+        var classElem = document.getElementsByClassName('p1');
+        classElem.style = backgroundColor = 'red'
+        }
+        //hence, here, style and containt manipulation is done. 
+
+    </script>
+</body>
+</html>

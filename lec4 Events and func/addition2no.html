@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" id="t1" class="form-control">
+        <input type="text" id="t2" class="form-control">
+
+        <button id="bt1" onclick="myfunc1()" class="btn btn-danger">add</button>
+        <button id="bt2" onclick="myfunc2()" class="btn btn-warning">multiply</button>
+        <button onclick="myfunc3()" class="btn btn-success">sub</button>
+        <button onclick="myfunc4()" class="btn btn-success">divide</button>
+       
+        <p class="p1">vinay</p>
+        <p class="p1"></p>
+        <!-- <textarea name="ans" id="" class="p1" cols="3" rows="1"></textarea> -->
+    </div>
+</body>
+
+<script>
+    function myfunc1() {
+        var n1 = document.getElementById('t1');
+        var n2 = document.getElementById('t2');//by default, entered value is string, and to use it we have to parse it to int or float. 
+        
+        // console.log(n1.value,typeof n1.value);
+        // console.log(n2.value, typeof n2.value);
+        var ans1 = parseFloat(n1.value) + parseFloat(n2.value);
+
+        document.getElementsByClassName('p1')[0].innerHTML = ans1.toFixed(2);
+        document.getElementsByClassName('p1')[1].innerHTML = ans1.toFixed(2);
+    }
+
+    function myfunc2() {
+        var n1 = document.getElementById('t1');
+        var n2 = document.getElementById('t2');
+        console.log(n1.value, typeof n1.value);
+        console.log(n2.value);
+        
+        var ans2 = n1.value * n2.value;
+
+        document.getElementsByClassName('p1')[0].innerHTML = ans2.toFixed(2);
+    }
+    function myfunc3(){
+        var n1 = document.getElementById('t1');
+        var n2 = document.getElementById('t2');
+
+        var result = n1.value - n2.value ;
+        document.getElementsByClassName('p1')[0].innerHTML = result.toFixed(2);    
+    }
+
+    function myfunc4(){
+        var n1 = document.getElementById('t1');
+        var n2 = document.getElementById('t2');
+
+        var res = n1.value / n2.value;
+
+        document.getElementsByClassName('p1')[0].innerHTML = res;
+    }
+
+</script>
+
+</html>

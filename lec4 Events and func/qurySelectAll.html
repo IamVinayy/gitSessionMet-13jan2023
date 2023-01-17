@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <style>
+            .abcd{
+                text-align: center;
+                font-size: 40px;
+                font-style: italic;
+                font-weight: bold;
+            }
+        </style>
+
+</head>
+
+<body>
+    <!-- 
+        ---------
+     -->
+    <div class="container">
+
+        <h1 >Format</h1>
+        <input type="text" name="txt" id="t1" class="form-control my-3">
+        <input type="text" name="txt" id="t2" class="form-control my-3">
+
+        <h1>Hello </h1>
+        <h1>Hello </h1>
+
+        <p id="para">test</p>
+        <p id="para">test</p>
+
+        <div class="xyz">hey</div>
+        <div class="xyz">hey</div>
+
+        <button onclick="myfunc()" class="btn btn-primary"> Enter</button>
+    </div>
+
+    <script>
+
+        
+        function myfunc(){
+            console.log('testing');
+            console.log(document);
+            var h1tag = document.querySelector('h1') //only 1st h1 tag is selected only remaining h1 will be neglected
+            console.log(h1tag);
+            h1tag.style.border = 'solid';
+
+            
+            var paraelem = document.querySelector('#para'); //only 1st id is selected
+            console.log(paraelem);
+            paraelem.style.background = 'gray'
+            
+            var selectclass = document.querySelector('.xyz');//oly 1st class is selected
+            console.log(selectclass);
+            
+            selectclass.style.background = 'tomato'
+
+            //hence querySelector will select first element only
+            
+            var rec1 = document.querySelectorAll('h1');
+            console.log(rec1);//all h1 will be selected
+            rec1[2].style.border = 'solid yellow'
+            rec1[1].innerHTML =Math.round(Math.random()*10);
+            
+            
+            var ids = document.querySelectorAll('#para');
+            ids[1].innerHTML = Math.random();
+            
+            var rec3 = document.querySelectorAll('.xyz');
+            rec3[0].style.textTransform = 'upperCase'
+            rec3[1].style.fontSize = '70px'
+            h1tag.className = 'abcd';
+
+            
+        }
+    </script>
+</body>
+
+</html>

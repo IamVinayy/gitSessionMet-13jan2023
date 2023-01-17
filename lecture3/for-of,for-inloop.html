@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    
+    <script>
+        // for of loop - only for array
+        var productSize = ['xl','xxl','l','m'];
+
+        document.write(`<li>${productSize[0]}</li>`);
+        document.write(`<li>${productSize[1]}</li>`);
+        document.write(`<li>${productSize[2]}</li>`);
+        document.write(`<li>${productSize[3]}</li>`);
+        //this will work but not not a right approach since we are using .write() repetively. 
+        
+        
+        // for(output-values of input-array){
+                                    // structure of for of loop
+        // }
+
+        for(var values of productSize){
+            document.write(`<li> <input type = 'checkbox'>${values}</li>`)
+        }
+        //same output as above
+
+        // for in loop - for arrays and objects
+
+        // for(output-index in input-array){
+        // indices will be printed 
+        // }
+
+        for(var i in productSize){
+            j=i++;
+            document.write(`<ul><li>${i}, ${productSize[i]}</li></ul>`);
+        }
+
+        var user = {
+            name:'vinay',
+            age: 24,
+            marks: 65,
+            company: 'bror'
+        };
+        //for(var result of user){}//error - since user is not iterable. only arrays are iterable.
+
+        for(var i in user){
+            document.write(user[i]);
+            document.write(`<br>`)
+            console.log(user[i]);
+        }
+document.write(`<br>`);
+
+for(var i in user){
+    document.write(`<h4>${user[i]}</h4>`);
+}
+    </script>
+</body>
+</html>
